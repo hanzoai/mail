@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-prevversion=$(go list -mod=readonly -m -f '{{ .Version }}' github.com/mjl-/mox@latest)
+prevversion=$(go list -mod=readonly -m -f '{{ .Version }}' github.com/hanzoai/mail@latest)
 if ! test -d tmp/mox-$prevversion; then
 	mkdir -p tmp/mox-$prevversion
 	git archive --format=tar $prevversion | tar -C tmp/mox-$prevversion -xf -

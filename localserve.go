@@ -25,17 +25,17 @@ import (
 
 	"github.com/mjl-/sconf"
 
-	"github.com/mjl-/mox/admin"
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dkim"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/junk"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/smtpserver"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/admin"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dkim"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/junk"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/smtpserver"
+	"github.com/hanzoai/mail/store"
 )
 
 func cmdLocalserve(c *cmd) {

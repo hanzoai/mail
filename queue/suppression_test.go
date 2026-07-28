@@ -3,8 +3,8 @@ package queue
 import (
 	"testing"
 
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/webapi"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/webapi"
 )
 
 func TestSuppression(t *testing.T) {

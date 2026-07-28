@@ -7,11 +7,11 @@ import (
 	"net"
 	"strings"
 
-	"github.com/mjl-/mox/dkim"
-	"github.com/mjl-/mox/dmarc"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/spf"
+	"github.com/hanzoai/mail/dkim"
+	"github.com/hanzoai/mail/dmarc"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/spf"
 )
 
 func ExampleLookup() {

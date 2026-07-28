@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // WebappFile serves a merged HTML and JS webapp as a single compressed, cacheable

@@ -32,20 +32,20 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dkim"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/webapi"
-	"github.com/mjl-/mox/webauth"
-	"github.com/mjl-/mox/webops"
+	"github.com/hanzoai/mail/dkim"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/webapi"
+	"github.com/hanzoai/mail/webauth"
+	"github.com/hanzoai/mail/webops"
 )
 
 var pkglog = mlog.New("webapi", nil)
@@ -239,8 +239,8 @@ fieldset { border: 0; }
 	</body>
 </html>
 `))
-	webapiDocsURL := "https://pkg.go.dev/github.com/mjl-/mox@" + moxvar.VersionBare + "/webapi/"
-	webhookDocsURL := "https://pkg.go.dev/github.com/mjl-/mox@" + moxvar.VersionBare + "/webhook/"
+	webapiDocsURL := "https://pkg.go.dev/github.com/hanzoai/mail@" + moxvar.VersionBare + "/webapi/"
+	webhookDocsURL := "https://pkg.go.dev/github.com/hanzoai/mail@" + moxvar.VersionBare + "/webhook/"
 	indexArgs := struct {
 		WebapiDocsURL  string
 		WebhookDocsURL string

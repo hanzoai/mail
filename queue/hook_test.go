@@ -13,11 +13,11 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dsn"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/webhook"
+	"github.com/hanzoai/mail/dsn"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/webhook"
 )
 
 // Test webhooks for incoming message that is not related to outgoing deliveries.

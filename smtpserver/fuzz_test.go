@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/store"
 )
 
 // Fuzz the server. For each fuzz string, we set up servers in various connection states, and write the string as command.

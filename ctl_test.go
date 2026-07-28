@@ -17,17 +17,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dmarcdb"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/imapclient"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/mtastsdb"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/tlsrptdb"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dmarcdb"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/imapclient"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/mtastsdb"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/tlsrptdb"
 )
 
 var ctxbg = context.Background()

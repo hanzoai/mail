@@ -10,9 +10,9 @@ import (
 
 	"golang.org/x/text/unicode/norm"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/smtp"
 )
 
 // Parser holds the original string and string with ascii a-z upper-cased for easy

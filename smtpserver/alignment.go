@@ -3,12 +3,12 @@ package smtpserver
 import (
 	"context"
 
-	"github.com/mjl-/mox/dkim"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/publicsuffix"
-	"github.com/mjl-/mox/spf"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/dkim"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/publicsuffix"
+	"github.com/hanzoai/mail/spf"
+	"github.com/hanzoai/mail/store"
 )
 
 // Alignment compares the msgFromDomain with the dkim and spf results, and returns

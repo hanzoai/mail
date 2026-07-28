@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/store"
 )
 
 // AccountAuth is for user accounts, with username/password, and sessions stored in

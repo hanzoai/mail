@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // todo: stricter parsing. xnonspace() and xword() should be replaced by proper parsers

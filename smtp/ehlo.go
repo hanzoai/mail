@@ -3,7 +3,7 @@ package smtp
 import (
 	"net"
 
-	"github.com/mjl-/mox/dns"
+	"github.com/hanzoai/mail/dns"
 )
 
 // Ehlo is the remote identification of an incoming SMTP connection.

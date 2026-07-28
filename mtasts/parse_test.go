@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mjl-/mox/dns"
+	"github.com/hanzoai/mail/dns"
 )
 
 func TestRecord(t *testing.T) {

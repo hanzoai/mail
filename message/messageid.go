@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/smtp"
 )
 
 var errBadMessageID = errors.New("not a message-id")

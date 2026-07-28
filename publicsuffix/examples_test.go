@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/publicsuffix"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/publicsuffix"
 )
 
 func ExampleLookup() {

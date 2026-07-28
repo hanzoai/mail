@@ -5,7 +5,7 @@ ARG goos
 ARG goarch
 WORKDIR /
 ARG moxversion
-RUN CGO_ENABLED=0 GOOS=$goos GOARCH=$goarch go install -mod mod -trimpath github.com/mjl-/mox@$moxversion
+RUN CGO_ENABLED=0 GOOS=$goos GOARCH=$goarch go install -mod mod -trimpath github.com/hanzoai/mail@$moxversion
 RUN test -f /go/bin/mox && cp /go/bin/mox /bin/mox || cp /go/bin/${goos}_${goarch}/mox /bin/mox
 
 # Using latest may break at some point, but will hopefully be convenient most of the time.

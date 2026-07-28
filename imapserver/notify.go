@@ -7,7 +7,7 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/store"
 )
 
 // Max number of pending changes for selected-delayed mailbox before we write a

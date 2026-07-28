@@ -25,16 +25,16 @@ import (
 	"github.com/mjl-/adns"
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/mtastsdb"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/smtpclient"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/tlsrpt"
-	"github.com/mjl-/mox/tlsrptdb"
-	"github.com/mjl-/mox/webhook"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/mtastsdb"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/smtpclient"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/tlsrpt"
+	"github.com/hanzoai/mail/tlsrptdb"
+	"github.com/hanzoai/mail/webhook"
 )
 
 var ctxbg = context.Background()

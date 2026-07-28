@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/mjl-/mox/dns"
+	"github.com/hanzoai/mail/dns"
 )
 
 func ExampleParseDomain() {

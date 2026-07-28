@@ -1,3 +1,19 @@
+# Hanzo Mail
+
+Hanzo Mail is a fork of [Mox](https://github.com/mjl-/mox) by Mechiel Lukkien,
+taken at upstream commit `9bbad6af30ae1c429dde9cdc2d04130532e1fed1` (v0.0.15
+plus 55 commits). Mox is MIT licensed; this fork stays MIT and does not
+relicense any upstream code. See [NOTICE](NOTICE) for the full lineage and for
+exactly which license applies to which files, and [LLM.md](LLM.md) for what this
+fork changes.
+
+Hanzo Mail is not affiliated with or endorsed by the Mox project or its author.
+
+The Go module path is `github.com/hanzoai/mail`. Apart from that rename, the
+documentation below is upstream's and still describes the software accurately.
+
+---
+
 Mox is a modern full-featured open source secure mail server for low-maintenance self-hosted email.
 
 For more details, see the mox website, https://www.xmox.nl.

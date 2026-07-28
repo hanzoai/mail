@@ -37,7 +37,7 @@ if test "$tagsrev" = ""; then exit 0; fi
 for tag in $tagsrev; do
 	echo "Testing upgrade from $tag to current."
 	mkdir $tag
-	(CGO_ENABLED=0 GOBIN=$PWD/$tag go install github.com/mjl-/mox@$tag)
+	(CGO_ENABLED=0 GOBIN=$PWD/$tag go install github.com/hanzoai/mail@$tag)
 	# Generate with historic release.
 	./$tag/mox gentestdata $tag/data
 	# Verify with current code. v0.0.[45] had a message with wrong Size. We don't

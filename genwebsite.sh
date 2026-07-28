@@ -97,13 +97,13 @@ const init = () => {
 		elem('p', 'Compile or download any version of mox, by tag (release), branch or commit hash.'),
 		elem('h1', 'Compile'),
 		elem('p', 'Run:'),
-		elem('pre', 'CGO_ENABLED=0 GOBIN=$PWD go install github.com/mjl-/mox@'+h),
+		elem('pre', 'CGO_ENABLED=0 GOBIN=$PWD go install github.com/hanzoai/mail@'+h),
 		elem('p', 'Mox is tested with the Go toolchain versions that are still have support: The most recent version, and the version before.'),
 		elem('h1', 'Download'),
 		elem('p', 'Download a binary for your platform:'),
 		elem('blockquote', ok ?
-			link('https://beta.gobuilds.org/github.com/mjl-/mox@'+h) :
-			'https://beta.gobuilds.org/github.com/mjl-/mox@'+h
+			link('https://beta.gobuilds.org/github.com/hanzoai/mail@'+h) :
+			'https://beta.gobuilds.org/github.com/hanzoai/mail@'+h
 		),
 		elem('p', 'Because mox is written in Go, builds are reproducible, also when cross-compiling. Gobuilds.org is a service that builds Go applications on-demand with the latest Go toolchain/runtime.'),
 		elem('h1', 'Localserve'),

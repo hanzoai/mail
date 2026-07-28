@@ -12,10 +12,10 @@ import (
 
 	"github.com/mjl-/sconf"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/webhook"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/webhook"
 )
 
 func cmdExample(c *cmd) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/store"
 )
 
 type numSet struct {

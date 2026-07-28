@@ -15,16 +15,16 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/dsn"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/sasl"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/smtpclient"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/webhook"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/dsn"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/sasl"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/smtpclient"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/webhook"
 )
 
 // todo: reuse connection? do fewer concurrently (other than with direct delivery).

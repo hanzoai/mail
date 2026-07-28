@@ -18,12 +18,12 @@ import (
 
 	"golang.org/x/text/unicode/norm"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/store"
 )
 
 // todo: add option to trust imported messages, causing us to look at Authentication-Results and Received-SPF headers and add eg verified spf/dkim/dmarc domains to our store, to jumpstart reputation.

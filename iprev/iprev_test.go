@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mjl-/mox/dns"
+	"github.com/hanzoai/mail/dns"
 )
 
 func TestIPRev(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/imapclient"
+	"github.com/hanzoai/mail/imapclient"
 )
 
 var searchMsg = strings.ReplaceAll(`Date: Mon, 1 Jan 2022 10:00:00 +0100 (CEST)

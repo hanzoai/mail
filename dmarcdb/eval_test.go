@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/dmarcrpt"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/queue"
+	"github.com/hanzoai/mail/dmarcrpt"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/queue"
 	"slices"
 )
 

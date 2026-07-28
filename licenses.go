@@ -4,10 +4,10 @@ import (
 	"embed"
 	"os"
 
-	"github.com/mjl-/mox/mox-"
+	"github.com/hanzoai/mail/mox-"
 )
 
-//go:embed LICENSE.MIT LICENSE.MPLv2.0 licenses/*
+//go:embed NOTICE LICENSE.MIT LICENSE.MPLv2.0 licenses/*
 var licensesFsys embed.FS
 
 func init() {

@@ -11,10 +11,10 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxvar"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxvar"
 )
 
 // AccountRemove represents the scheduled removal of an account, when its last

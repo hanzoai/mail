@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/mjl-/mox/mox-"
+	"github.com/hanzoai/mail/mox-"
 )
 
 func TestServeHTTP(t *testing.T) {

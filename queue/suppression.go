@@ -9,9 +9,9 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/webapi"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/webapi"
 )
 
 // todo: we should be processing spam complaints and add addresses to the list.

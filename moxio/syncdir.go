@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // SyncDir opens a directory and syncs its contents to disk.

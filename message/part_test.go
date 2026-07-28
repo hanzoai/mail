@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 var pkglog = mlog.New("message", nil)

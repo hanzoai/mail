@@ -7,8 +7,8 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/imapclient"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/imapclient"
+	"github.com/hanzoai/mail/store"
 )
 
 func TestFetch(t *testing.T) {

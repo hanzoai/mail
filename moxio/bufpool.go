@@ -7,7 +7,7 @@ import (
 	"io"
 	"log/slog"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // todo: instead of a bufpool, should maybe just make an alternative to bufio.Reader with a big enough buffer that we can fully use to read a line.

@@ -4,7 +4,7 @@ import (
 	"context"
 	"net"
 
-	"github.com/mjl-/mox/dns"
+	"github.com/hanzoai/mail/dns"
 )
 
 // checks if domain can accept email.

@@ -6,9 +6,9 @@ import (
 	"log/slog"
 	"net/textproto"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/smtp"
 )
 
 // From extracts the address in the From-header.

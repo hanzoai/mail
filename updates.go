@@ -14,8 +14,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/updates"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/updates"
 )
 
 func cmdUpdatesAddSigned(c *cmd) {

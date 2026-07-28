@@ -45,14 +45,14 @@ import (
 
 	"github.com/mjl-/adns"
 
-	"github.com/mjl-/mox/dane"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/sasl"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/stub"
-	"github.com/mjl-/mox/tlsrpt"
+	"github.com/hanzoai/mail/dane"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/sasl"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/stub"
+	"github.com/hanzoai/mail/tlsrpt"
 )
 
 // todo future: add function to deliver message to multiple recipients. requires more elaborate return value, indicating success per message: some recipients may succeed, others may fail, and we should still deliver. to prevent backscatter, we also sometimes don't allow multiple recipients. ../rfc/5321:1144

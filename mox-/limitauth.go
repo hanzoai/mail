@@ -3,7 +3,7 @@ package mox
 import (
 	"time"
 
-	"github.com/mjl-/mox/ratelimit"
+	"github.com/hanzoai/mail/ratelimit"
 )
 
 var LimiterFailedAuth *ratelimit.Limiter

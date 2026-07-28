@@ -4,9 +4,9 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/smtp"
 )
 
 var (

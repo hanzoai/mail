@@ -6,7 +6,7 @@ import (
 
 	"golang.org/x/crypto/blake2b"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // see https://en.wikipedia.org/wiki/Bloom_filter

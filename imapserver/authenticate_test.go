@@ -20,10 +20,10 @@ import (
 
 	"golang.org/x/text/secure/precis"
 
-	"github.com/mjl-/mox/imapclient"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/scram"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/imapclient"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/scram"
+	"github.com/hanzoai/mail/store"
 )
 
 func TestAuthenticateLogin(t *testing.T) {

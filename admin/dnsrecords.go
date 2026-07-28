@@ -12,14 +12,14 @@ import (
 
 	"github.com/mjl-/adns"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dkim"
-	"github.com/mjl-/mox/dmarc"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/spf"
-	"github.com/mjl-/mox/tlsrpt"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dkim"
+	"github.com/hanzoai/mail/dmarc"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/spf"
+	"github.com/hanzoai/mail/tlsrpt"
 	"slices"
 )
 
@@ -261,7 +261,7 @@ func DomainRecords(domConf config.Domain, domain dns.Domain, hasDNSSEC bool, cer
 		// ../rfc/6186:133 ../rfc/8314:692
 		// ../rfc/2782:202 says we MUST NOT have a CNAME as the target to a SRV record, but
 		// arnt says it's safe to ignore that statement, see
-		// https://github.com/mjl-/mox/pull/367#issuecomment-3486518824. Software isn't
+		// https://github.com/hanzoai/mail/pull/367#issuecomment-3486518824. Software isn't
 		// likely to actually update their configs to the targets of CNAMEs, and the
 		// additional lookups won't cause relevant delays or traffic.
 		"; For secure IMAP and submission autoconfig, point to mail host.",

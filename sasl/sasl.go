@@ -23,7 +23,7 @@ import (
 
 	"golang.org/x/text/secure/precis"
 
-	"github.com/mjl-/mox/scram"
+	"github.com/hanzoai/mail/scram"
 )
 
 // Client is a SASL client.

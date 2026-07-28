@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
 )
 
 var ErrNoRegistration = errors.New("registration date not found")

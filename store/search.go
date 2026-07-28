@@ -7,8 +7,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // WordSearch holds context for a search, with scratch buffers to prevent

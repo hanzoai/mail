@@ -15,11 +15,11 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/junk"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/junk"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/store"
 )
 
 var ErrMessageNotFound = errors.New("no such message")

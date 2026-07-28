@@ -25,8 +25,8 @@ import (
 
 	"golang.org/x/text/encoding/ianaindex"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/smtp"
 	"slices"
 )
 

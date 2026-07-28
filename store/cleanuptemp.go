@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // CloseRemoveTempFile closes and removes f, a file described by descr. Often

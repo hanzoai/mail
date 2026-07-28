@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/updates"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/updates"
 )
 
 // StoreLastKnown stores the the last known version. Future update checks compare

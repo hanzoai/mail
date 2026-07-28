@@ -1,0 +1,68 @@
+Hanzo Mail
+==========
+
+Hanzo Mail is a fork of Mox, a mail server by Mechiel Lukkien.
+
+  Upstream project:  Mox
+  Upstream URL:      https://github.com/mjl-/mox
+  Upstream author:   Mechiel Lukkien <mechiel@ueber.net>
+  Upstream license:  MIT (see LICENSE.MIT)
+
+  Fork point:        9bbad6af30ae1c429dde9cdc2d04130532e1fed1
+                     (upstream tag v0.0.15 plus 55 commits, 2026-07-21)
+  Fork repository:   https://github.com/hanzoai/mail
+  Go module path:    github.com/hanzoai/mail
+
+Hanzo Mail is not affiliated with or endorsed by the Mox project or its author.
+
+
+Licensing
+---------
+
+This repository is MIT licensed. The fork does not relicense any upstream code,
+and modifications made by Hanzo are released under the same MIT license.
+
+Three distinct sets of terms apply to the files in this repository:
+
+1. Mox source code, and Hanzo's modifications to it — the great majority of
+   this repository.
+
+     License:    MIT, in LICENSE.MIT
+     Copyright:  2021 Mechiel Lukkien <mechiel@ueber.net>, and Hanzo AI, Inc.
+                 for subsequent modifications
+
+   The MIT copyright notice is preserved verbatim. Upstream's copyright line
+   is retained as-is; Hanzo claims copyright only over its own changes.
+
+2. publicsuffix/public_suffix_list.txt — the Public Suffix List, published by
+   Mozilla. This single data file is the only content in this repository
+   covered by the Mozilla Public License.
+
+     License:    MPL-2.0, in LICENSE.MPLv2.0
+     Source:     https://publicsuffix.org
+
+   LICENSE.MPLv2.0 is present solely to cover this file. Neither Mox nor Hanzo
+   Mail is dual-licensed: the MPL applies to the Public Suffix List data and to
+   nothing else in this repository.
+
+3. vendor/** — third-party Go dependencies, each under its own license as
+   published by its respective authors. These include BSD-3-Clause code from
+   The Go Authors (golang.org/x/..., and the Go-derived forks
+   github.com/mjl-/{adns,autocert,flate,sherpa}), Apache-2.0 code (the
+   Prometheus client libraries, google.golang.org/protobuf), and others.
+
+     Licenses:   collected verbatim under licenses/
+
+   The licenses/ tree is generated from vendor/ by genlicenses.sh and is
+   preserved intact from upstream. It contains the dependencies' license files,
+   not any license grant covering Mox or Hanzo Mail themselves.
+
+The command `mail licenses` prints all of the above from the running binary.
+
+
+Changes from upstream
+---------------------
+
+The Go module path was renamed from github.com/mjl-/mox to
+github.com/hanzoai/mail, and import paths were updated to match. See LLM.md for
+the full record of what was and was not changed.

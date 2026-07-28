@@ -52,18 +52,18 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/junk"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/publicsuffix"
-	"github.com/mjl-/mox/scram"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/junk"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/publicsuffix"
+	"github.com/hanzoai/mail/scram"
+	"github.com/hanzoai/mail/smtp"
 )
 
 // If true, each time an account is closed its database file is checked for

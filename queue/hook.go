@@ -20,17 +20,17 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/dsn"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/webhook"
-	"github.com/mjl-/mox/webops"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/dsn"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/webhook"
+	"github.com/hanzoai/mail/webops"
 )
 
 var (

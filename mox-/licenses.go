@@ -25,7 +25,14 @@ func LicensesWrite(dst io.Writer) error {
 		return nil
 	}
 
-	if _, err := fmt.Fprintf(dst, "# github.com/mjl-/mox/LICENSE\n\n"); err != nil {
+	if _, err := fmt.Fprintf(dst, "# github.com/hanzoai/mail/NOTICE\n\n"); err != nil {
+		return err
+	}
+	if err := copyFile("NOTICE"); err != nil {
+		return err
+	}
+
+	if _, err := fmt.Fprintf(dst, "\n\n# github.com/hanzoai/mail/LICENSE.MIT - fork of github.com/mjl-/mox\n\n"); err != nil {
 		return err
 	}
 	if err := copyFile("LICENSE.MIT"); err != nil {

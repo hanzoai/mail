@@ -14,7 +14,7 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/smtp"
 )
 
 // TLSPublicKey is a public key for use with TLS client authentication based on the

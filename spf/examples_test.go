@@ -6,9 +6,9 @@ import (
 	"log/slog"
 	"net"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/spf"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/spf"
 )
 
 func ExampleVerify() {
