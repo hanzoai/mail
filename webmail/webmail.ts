@@ -1354,7 +1354,7 @@ const cmdHelp = async () => {
 				dom.div(style({marginBottom: '1ex'}), 'Multiple messages can be selected by clicking messages while holding the control and/or shift keys. Dragging messages and dropping them on a mailbox moves the messages to that mailbox.'),
 				dom.div(style({marginBottom: '1ex'}), 'Text that changes ', dom.span(attr.title('Unicode blocks, e.g. from basic latin to cyrillic, or to emoticons.'), '"character groups"'), ' without whitespace has an ', dom.span(dom._class('scriptswitch'), 'orange underline'), ', which can be a sign of an intent to mislead (e.g. phishing).'),
 
-				dom.div(style({marginTop: '2ex'}), 'Mox is open source email server software, this is version ', moxversion, ', see ', dom.a(attr.href('licenses.txt'), 'licenses'), '.', dom.br(), 'Feedback, including bug reports, is appreciated! ', link('https://github.com/mjl-/mox/issues/new')),
+				dom.div(style({marginTop: '2ex'}), 'Hanzo Mail is open source email server software, this is version ', moxversion, ', see ', dom.a(attr.href('licenses.txt'), 'licenses'), '.', dom.br(), 'Feedback, including bug reports, is appreciated! ', link('https://github.com/hanzoai/mail/issues/new')),
 			),
 		),
 	)
@@ -7751,8 +7751,8 @@ Details of the error and browser:
 				),
 				dom.br(),
 				dom.div('There is a good chance this is a bug in Mox Webmail.'),
-				dom.div('Consider filing a bug report ("issue") at ', link('https://github.com/mjl-/mox/issues/new?title='+encodeURIComponent('mox webmail js error: "'+xerrmsg+'"')+'&body='+encodeURIComponent(body), 'https://github.com/mjl-/mox/issues/new'), '. The link includes the error details.'),
-				dom.div('Before reporting you could check previous ', link('https://github.com/mjl-/mox/issues?q=is%3Aissue+"mox+webmail+js+error%3A"', 'webmail bug reports'), '.'),
+				dom.div('Consider filing a bug report ("issue") at ', link('https://github.com/hanzoai/mail/issues/new?title='+encodeURIComponent('hanzo mail webmail js error: "'+xerrmsg+'"')+'&body='+encodeURIComponent(body), 'https://github.com/hanzoai/mail/issues/new'), '. The link includes the error details.'),
+				dom.div('Before reporting you could check previous ', link('https://github.com/hanzoai/mail/issues?q=is%3Aissue+"hanzo+mail+webmail+js+error%3A"', 'webmail bug reports'), '.'),
 				dom.br(),
 				dom.div('Your feedback will help improve mox, thanks!'),
 				dom.br(),
