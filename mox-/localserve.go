@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/smtp"
 )
 
 func LocalserveNeedsError(lp smtp.Localpart) (code int, timeout bool) {

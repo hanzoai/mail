@@ -12,9 +12,9 @@ import (
 
 	"github.com/mjl-/flate"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/scram"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/scram"
 )
 
 // Capability writes the IMAP4 "CAPABILITY" command, requesting a list of

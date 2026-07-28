@@ -38,15 +38,15 @@ import (
 
 	"github.com/mjl-/sconf"
 
-	"github.com/mjl-/mox/autotls"
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dkim"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/mtasts"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/autotls"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dkim"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/mtasts"
+	"github.com/hanzoai/mail/smtp"
 )
 
 var pkglog = mlog.New("mox", nil)

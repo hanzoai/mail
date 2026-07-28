@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/store"
 )
 
 type eventWriter struct {

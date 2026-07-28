@@ -20,10 +20,10 @@ import (
 
 	"github.com/mjl-/adns"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
 )
 
 var ErrNoReport = errors.New("no tlsrpt report found")

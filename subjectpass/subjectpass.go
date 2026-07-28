@@ -18,11 +18,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/stub"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/stub"
 )
 
 var (

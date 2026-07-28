@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/smtp"
 )
 
 func TestSubjectPass(t *testing.T) {

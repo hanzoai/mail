@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mjl-/mox/imapclient"
+	"github.com/hanzoai/mail/imapclient"
 )
 
 func TestSelect(t *testing.T) {

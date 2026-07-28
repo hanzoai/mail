@@ -4,8 +4,8 @@ import (
 	"net"
 	"strings"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/message"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/message"
 )
 
 // ../rfc/7208:2083

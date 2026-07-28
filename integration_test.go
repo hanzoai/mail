@@ -17,12 +17,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/imapclient"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/sasl"
-	"github.com/mjl-/mox/smtpclient"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/imapclient"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/sasl"
+	"github.com/hanzoai/mail/smtpclient"
 )
 
 func tcheck(t *testing.T, err error, errmsg string) {

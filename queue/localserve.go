@@ -10,12 +10,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/dsn"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/smtpclient"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/dsn"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/smtpclient"
+	"github.com/hanzoai/mail/store"
 )
 
 // We won't be dialing remote servers. We just connect the smtp port of the first

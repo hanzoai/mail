@@ -24,9 +24,9 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxvar"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxvar"
 	"slices"
 )
 

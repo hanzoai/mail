@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 func TestPreviewText(t *testing.T) {

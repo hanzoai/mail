@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 var pkglog = mlog.New("tlsrpt", nil)

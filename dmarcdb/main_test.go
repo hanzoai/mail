@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/mjl-/mox/metrics"
+	"github.com/hanzoai/mail/metrics"
 )
 
 func TestMain(m *testing.M) {

@@ -6,8 +6,8 @@ import (
 	"log/slog"
 	"net"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/dnsbl"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/dnsbl"
 )
 
 func ExampleLookup() {

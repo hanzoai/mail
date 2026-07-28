@@ -10,7 +10,7 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/mox-"
+	"github.com/hanzoai/mail/mox-"
 )
 
 func TestLoginAttempt(t *testing.T) {

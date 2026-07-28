@@ -7,7 +7,7 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/store"
 )
 
 // Changed during tests.

@@ -49,10 +49,10 @@ import (
 
 	"github.com/mjl-/sherpa"
 
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/store"
 )
 
 // Delay before responding in case of bad authentication attempt.

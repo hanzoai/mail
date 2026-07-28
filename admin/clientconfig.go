@@ -5,9 +5,9 @@ import (
 	"maps"
 	"slices"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mox-"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mox-"
 )
 
 type TLSMode uint8

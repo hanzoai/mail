@@ -7,8 +7,8 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/tlsrpt"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/tlsrpt"
 )
 
 // TLSResult is stored in the database to track TLS results per policy domain, day

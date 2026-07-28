@@ -22,11 +22,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/sasl"
-	"github.com/mjl-/mox/scram"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/sasl"
+	"github.com/hanzoai/mail/scram"
+	"github.com/hanzoai/mail/smtp"
 )
 
 var zerohost dns.Domain

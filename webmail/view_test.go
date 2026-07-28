@@ -18,9 +18,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/store"
 )
 
 func TestView(t *testing.T) {

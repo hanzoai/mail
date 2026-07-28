@@ -11,9 +11,9 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
 )
 
 var loginAttemptsMaxPerAccount = 10 * 1000 // Lower during tests.

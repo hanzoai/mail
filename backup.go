@@ -18,13 +18,13 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dmarcdb"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/mtastsdb"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/tlsrptdb"
+	"github.com/hanzoai/mail/dmarcdb"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/mtastsdb"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/tlsrptdb"
 )
 
 func xbackupctl(ctx context.Context, xctl *ctl) {

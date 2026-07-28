@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/smtpclient"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/smtpclient"
+	"github.com/hanzoai/mail/store"
 )
 
 // Check user can submit message with message From address they are member of.

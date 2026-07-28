@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 type token interface {

@@ -19,15 +19,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/junk"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/mtasts"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/junk"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/mtasts"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/store"
 )
 
 var pkglog = mlog.New("admin", nil)

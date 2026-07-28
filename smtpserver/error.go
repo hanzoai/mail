@@ -3,7 +3,7 @@ package smtpserver
 import (
 	"fmt"
 
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/smtp"
 )
 
 func xcheckf(err error, format string, args ...any) {

@@ -3,8 +3,8 @@ package store
 import (
 	"os"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
 )
 
 // CreateMessageTemp creates a temporary file, e.g. for delivery. The is created in

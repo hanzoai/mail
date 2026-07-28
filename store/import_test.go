@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 func TestMboxReader(t *testing.T) {

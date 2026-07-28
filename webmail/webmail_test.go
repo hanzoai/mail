@@ -25,12 +25,12 @@ import (
 
 	"github.com/mjl-/sherpa"
 
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/webauth"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/webauth"
 )
 
 var ctxbg = context.Background()

@@ -8,8 +8,8 @@ import (
 
 	"github.com/mjl-/adns"
 
-	"github.com/mjl-/mox/dane"
-	"github.com/mjl-/mox/dns"
+	"github.com/hanzoai/mail/dane"
+	"github.com/hanzoai/mail/dns"
 )
 
 func ExampleDial() {

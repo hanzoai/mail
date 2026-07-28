@@ -8,7 +8,7 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/store"
 )
 
 func cmdExportMaildir(c *cmd) {

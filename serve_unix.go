@@ -22,16 +22,16 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/dnsbl"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/updates"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/dnsbl"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/updates"
 )
 
 var metricDNSBL = promauto.NewGaugeVec(
@@ -328,7 +328,7 @@ Only implemented on unix systems, not Windows.
 				Received: time.Now(),
 				Flags:    store.Flags{Flagged: true},
 			}
-			n, err := fmt.Fprintf(f, "Date: %s\r\nSubject: mox %s available\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 8-bit\r\n\r\nHi!\r\n\r\nVersion %s of mox is available, this install is at %s.\r\n\r\nChanges:\r\n\r\n%s\r\n\r\nPlease report any issues at https://github.com/mjl-/mox, thanks!\r\n\r\nCheers,\r\nmox\r\n", time.Now().Format(message.RFC5322Z), latest, latest, current, strings.ReplaceAll(cl.String(), "\n", "\r\n"))
+			n, err := fmt.Fprintf(f, "Date: %s\r\nSubject: mox %s available\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 8-bit\r\n\r\nHi!\r\n\r\nVersion %s of mox is available, this install is at %s.\r\n\r\nChanges:\r\n\r\n%s\r\n\r\nPlease report any issues at https://github.com/hanzoai/mail, thanks!\r\n\r\nCheers,\r\nmox\r\n", time.Now().Format(message.RFC5322Z), latest, latest, current, strings.ReplaceAll(cl.String(), "\n", "\r\n"))
 			if err != nil {
 				log.Infox("writing temporary message file for changelog delivery", err)
 				return next

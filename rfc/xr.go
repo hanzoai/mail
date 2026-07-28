@@ -292,7 +292,7 @@ body { margin: 0; padding: 0; font-family: 'ubuntu', 'lato', sans-serif; }
 	</head>
 	<body>
 		<div style="display: flex; flex-direction: column; height: 100vh">
-			<div style="padding: .5em"><a href="../../">mox</a>, <span title="The mox code contains references to RFCs, often with specific line numbers. RFCs are generated that point back to the source code. This page shows code and RFCs side by side, with cross-references hyperlinked.">cross-referenced code and RFCs</span>: <a href="../RELEASE/" style="font-weight: RELEASEWEIGHT" title="released version">RELEASE</a> <a href="../dev/" style="font-weight: REVISIONWEIGHT" title="branch main">dev</a> (<a href="https://github.com/mjl-/mox/commit/REVISION" title="Source code commit for this revision.">commit REVISION</a>, DATE)</div>
+			<div style="padding: .5em"><a href="../../">mox</a>, <span title="The mox code contains references to RFCs, often with specific line numbers. RFCs are generated that point back to the source code. This page shows code and RFCs side by side, with cross-references hyperlinked.">cross-referenced code and RFCs</span>: <a href="../RELEASE/" style="font-weight: RELEASEWEIGHT" title="released version">RELEASE</a> <a href="../dev/" style="font-weight: REVISIONWEIGHT" title="branch main">dev</a> (<a href="https://github.com/hanzoai/mail/commit/REVISION" title="Source code commit for this revision.">commit REVISION</a>, DATE)</div>
 			<div style="flex-grow: 1; display: flex; align-items: stretch">
 				<div style="flex-grow: 1; margin: 1ex; position: relative; display: flex; flex-direction: column">
 					<div style="margin-bottom: .5ex"><span id="codefile" style="font-weight: bold">...</span>, <a href="code.html" target="code">index</a></div>

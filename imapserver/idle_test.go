@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/imapclient"
+	"github.com/hanzoai/mail/imapclient"
 )
 
 func TestIdle(t *testing.T) {

@@ -9,9 +9,9 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // We process messages in database transactions in batches. Otherwise, for accounts

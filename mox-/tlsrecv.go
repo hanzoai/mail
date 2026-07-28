@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // TLSReceivedComment returns a comment about TLS of the connection for use in a Receive header.

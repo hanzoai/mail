@@ -12,8 +12,8 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/store"
 )
 
 // If last search output was this long ago, we write an untagged inprogress

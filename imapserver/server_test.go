@@ -21,11 +21,11 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/imapclient"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/moxvar"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/imapclient"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/moxvar"
+	"github.com/hanzoai/mail/store"
 	"slices"
 )
 

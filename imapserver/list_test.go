@@ -3,8 +3,8 @@ package imapserver
 import (
 	"testing"
 
-	"github.com/mjl-/mox/imapclient"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/imapclient"
+	"github.com/hanzoai/mail/store"
 )
 
 func TestListBasic(t *testing.T) {

@@ -8,8 +8,8 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/store"
 )
 
 // LIST command, for listing mailboxes with various attributes, including about subscriptions and children.

@@ -24,8 +24,8 @@ import (
 
 	"golang.org/x/net/idna"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // todo: automatically fetch new lists periodically? compare it with the old one. refuse it if it changed too much, especially if it contains far fewer entries than before.

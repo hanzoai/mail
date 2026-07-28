@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 func TestBloom(t *testing.T) {

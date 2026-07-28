@@ -6,7 +6,7 @@ import (
 	"crypto/tls"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
+	"github.com/hanzoai/mail/mlog"
 )
 
 // StartTLSSessionTicketKeyRefresher sets session keys on the TLS config, and

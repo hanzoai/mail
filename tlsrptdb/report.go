@@ -12,10 +12,10 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/tlsrpt"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/tlsrpt"
 )
 
 var (

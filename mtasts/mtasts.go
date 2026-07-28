@@ -23,10 +23,10 @@ import (
 
 	"github.com/mjl-/adns"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
-	"github.com/mjl-/mox/stub"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
+	"github.com/hanzoai/mail/stub"
 )
 
 var (

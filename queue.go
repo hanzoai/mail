@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mjl-/mox/queue"
+	"github.com/hanzoai/mail/queue"
 )
 
 func xctlwriteJSON(ctl *ctl, v any) {

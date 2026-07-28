@@ -11,10 +11,10 @@ set -e
 platforms=linux/amd64,linux/arm64,linux/arm,linux/386,linux/ppc64le,linux/s390x
 # todo: linux/riscv64 currently absent for alpine:latest, only at alpine:edge
 
-# We are building by "go install github.com/mjl-/mox@$moxversion", to ensure the
+# We are building by "go install github.com/hanzoai/mail@$moxversion", to ensure the
 # binary gets a proper version stamped into its buildinfo. It also helps to ensure
 # there is no accidental local change in the image.
-moxversion=$(go list -mod mod -m github.com/mjl-/mox@$(git rev-parse HEAD) | cut -f2 -d' ')
+moxversion=$(go list -mod mod -m github.com/hanzoai/mail@$(git rev-parse HEAD) | cut -f2 -d' ')
 echo Building mox $moxversion for $platforms, without local/uncommitted changes
 
 # Ensure latest golang and alpine docker images.

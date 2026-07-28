@@ -19,8 +19,8 @@ import (
 	"net"
 	"strings"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/moxio"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/moxio"
 )
 
 // Conn is an connection to an IMAP server.

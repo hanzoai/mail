@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/smtp"
 )
 
 var pkglog = mlog.New("spf", nil)

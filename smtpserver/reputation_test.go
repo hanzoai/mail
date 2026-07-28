@@ -10,11 +10,11 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/publicsuffix"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/publicsuffix"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/store"
 )
 
 var pkglog = mlog.New("smtpserver", nil)

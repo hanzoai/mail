@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/mjl-/mox/dns"
+	"github.com/hanzoai/mail/dns"
 )
 
 // ../rfc/8601:577

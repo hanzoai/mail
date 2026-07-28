@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/smtp"
 )
 
 func TestSig(t *testing.T) {

@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mjl-/mox/dkim"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/spf"
+	"github.com/hanzoai/mail/dkim"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/spf"
 )
 
 var pkglog = mlog.New("dmarc", nil)

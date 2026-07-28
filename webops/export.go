@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/store"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/store"
 )
 
 // Export is used by webmail and webaccount to export messages of one or

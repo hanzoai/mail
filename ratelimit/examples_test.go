@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/mjl-/mox/ratelimit"
+	"github.com/hanzoai/mail/ratelimit"
 )
 
 func ExampleLimiter() {

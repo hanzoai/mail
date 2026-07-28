@@ -3,7 +3,7 @@ package imapserver
 import (
 	"testing"
 
-	"github.com/mjl-/mox/imapclient"
+	"github.com/hanzoai/mail/imapclient"
 )
 
 func TestExpunge(t *testing.T) {

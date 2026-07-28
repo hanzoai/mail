@@ -10,8 +10,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/mjl-/mox/admin"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/admin"
+	"github.com/hanzoai/mail/smtp"
 )
 
 // Apple software isn't good at autoconfig/autodiscovery, but it can import a

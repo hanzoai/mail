@@ -8,8 +8,8 @@ import (
 
 	"golang.org/x/text/unicode/norm"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/smtp"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/smtp"
 )
 
 // Pedantic enables stricter parsing.

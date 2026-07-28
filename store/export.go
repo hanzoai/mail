@@ -16,8 +16,8 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
 )
 
 // Archiver can archive multiple mailboxes and their messages.

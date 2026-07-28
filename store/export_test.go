@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
 )
 
 func TestExport(t *testing.T) {

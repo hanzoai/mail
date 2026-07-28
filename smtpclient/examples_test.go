@@ -9,9 +9,9 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/sasl"
-	"github.com/mjl-/mox/smtpclient"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/sasl"
+	"github.com/hanzoai/mail/smtpclient"
 )
 
 func ExampleClient() {

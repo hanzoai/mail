@@ -1,4 +1,4 @@
-module github.com/mjl-/mox
+module github.com/hanzoai/mail
 
 go 1.25.0
 

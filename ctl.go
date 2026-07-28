@@ -22,18 +22,18 @@ import (
 
 	"github.com/mjl-/bstore"
 
-	"github.com/mjl-/mox/admin"
-	"github.com/mjl-/mox/config"
-	"github.com/mjl-/mox/dns"
-	"github.com/mjl-/mox/imapserver"
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/metrics"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/smtp"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/webapi"
+	"github.com/hanzoai/mail/admin"
+	"github.com/hanzoai/mail/config"
+	"github.com/hanzoai/mail/dns"
+	"github.com/hanzoai/mail/imapserver"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/metrics"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/smtp"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/webapi"
 )
 
 // ctl represents a connection to the ctl unix domain socket of a running mox instance.

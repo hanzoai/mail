@@ -19,12 +19,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mjl-/mox/message"
-	"github.com/mjl-/mox/mlog"
-	"github.com/mjl-/mox/mox-"
-	"github.com/mjl-/mox/queue"
-	"github.com/mjl-/mox/store"
-	"github.com/mjl-/mox/webapi"
+	"github.com/hanzoai/mail/message"
+	"github.com/hanzoai/mail/mlog"
+	"github.com/hanzoai/mail/mox-"
+	"github.com/hanzoai/mail/queue"
+	"github.com/hanzoai/mail/store"
+	"github.com/hanzoai/mail/webapi"
 )
 
 var ctxbg = context.Background()

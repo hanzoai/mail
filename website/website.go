@@ -482,8 +482,8 @@ h2 { background: linear-gradient(90deg, #6dd5fd 0%, #77e8e3 100%); display: inli
 					<br/>
 					External links:
 					<ul style="list-style: none">
-						<li><a href="https://github.com/mjl-/mox">Sources at github</a></li>
-						<li><a href="https://pkg.go.dev/github.com/mjl-/mox/webapi/">Webapi &amp; webhooks</a></li>
+						<li><a href="https://github.com/hanzoai/mail">Sources at github</a></li>
+						<li><a href="https://pkg.go.dev/github.com/hanzoai/mail/webapi/">Webapi &amp; webhooks</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -495,7 +495,7 @@ var after = `
 				<br/>
 				<br/>
 				<div class="meta">
-					<div><a href="https://github.com/mjl-/mox/issues/new?title=website:+">feedback?</a></div>
+					<div><a href="https://github.com/hanzoai/mail/issues/new?title=website:+">feedback?</a></div>
 					<div><span>[commit]</span></div>
 				</div>
 			</div>
