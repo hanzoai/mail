@@ -63,9 +63,11 @@ Only the Go module path, and only where it affects the build:
 - **`apidiff/v0.0.9.txt`, `v0.0.10.txt`, `v0.0.11.txt`, `next.txt`** — historical
   records of *upstream's* API at upstream releases. Rewriting the paths in them
   would falsify a historical record. Leave them.
-- **`website/**`, `develop.txt`** — upstream's own website/docs content.
-  (`develop.txt` also references `mjl-/mox-website-files`, a different repo —
-  do not let a careless `sed` catch that prefix.)
+- **`website/*.md`, `develop.txt`** — upstream's own website prose.
+  (`develop.txt` also references `mjl-/mox-website-files`, a *different* repo —
+  do not let a careless `sed` catch that prefix.) Note `website/website.go` *is*
+  Go source and did change: the rename also repointed its "Sources at github"
+  and "feedback?" links at `hanzoai/mail`, which is the right outcome for a fork.
 - **The `mox` command name, config keys, data directory layout, and the `mox`
   Go package name in `mox-/`.** Renaming these is a separate, larger job that
   breaks on-disk config and data compatibility. The binary still prints
@@ -75,6 +77,26 @@ Only the Go module path, and only where it affects the build:
   bug reports. `webmail.js` is generated from the `.ts`, so this needs the
   frontend toolchain, not a `sed`. **Blocking before any deploy** — otherwise our
   webmail sends Hanzo users to file bugs on upstream's tracker.
+
+## Remaining references to upstream — all intentional
+
+`grep -rc 'mjl-/mox' --exclude-dir={.git,vendor,licenses} .` should return only
+these. Anything else is an accident and should be reviewed:
+
+| File | Count | Why |
+|---|---|---|
+| `apidiff/v0.0.9.txt`, `v0.0.10.txt`, `v0.0.11.txt`, `next.txt` | 63 | Historical records of upstream's API. Falsifying them would be dishonest. |
+| `website/index.md`, `install/index.md`, `features/index.md` | 22 | Upstream website prose, not rebranded. |
+| `README.md`, `LLM.md`, `NOTICE` | 16 | Deliberate attribution. |
+| `webmail/webmail.ts`, `webmail.js` | 5 | Upstream issue-tracker links — **the pre-deploy blocker above.** |
+| `mox-/licenses.go` | 1 | The "fork of github.com/mjl-/mox" label in `mail licenses`. |
+| `develop.txt` | 1 | Points at `mjl-/mox-website-files`, a different repo. |
+
+Verify the fork's exact delta at any time with `git diff fork-point..main`. The
+`fork-point` tag is an annotated tag on upstream commit
+`9bbad6af30ae1c429dde9cdc2d04130532e1fed1`. That diff must never show changes to
+`LICENSE.MIT`, `LICENSE.MPLv2.0`, `licenses/`, or `vendor/` — currently it shows
+none.
 
 ## Build and test
 
