@@ -1,0 +1,14 @@
+# Canonical CI/CD config for hanzoai/mail — read by hanzoai/ci (via
+# .hanzo/workflows/cicd.yml) and by platform.hanzo.ai.
+#
+# Go server (mox fork). Dependencies are vendored, so the build needs no network
+# and the gate is the compile plus vet over every package — the same two commands
+# the repo's own Makefile runs first, for the same reason: they catch the break
+# before anything slower does.
+#
+# No `images:` and no `deploy:` — nothing in universe runs this yet. A build
+# target for a service nobody deploys would be a tag that means nothing; when a
+# Service CR exists, the image block goes here and not before.
+test:
+  - name: build
+    run: CGO_ENABLED=0 go build ./... && CGO_ENABLED=0 go vet ./...
