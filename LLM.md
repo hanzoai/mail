@@ -31,6 +31,11 @@ statement; `mail licenses` prints it from the running binary.
    covers.** Mox is *not* dual-licensed. Proof: `mox-/licenses.go` labels
    `LICENSE.MPLv2.0` as `https://publicsuffix.org - Public Suffix List Mozilla`,
    separate from mox's own MIT, and `README.md` says the same.
+   The tracked copy is not the published document byte-for-byte: the
+   `go:generate` line keeps upstream's licence and version header and the ICANN
+   section's rules, and drops the per-registry commentary and the private
+   section, neither of which `ParseList` reads. Both forms parse to the same
+   `List`, so this is a smaller artifact, not a different one.
 3. **`vendor/**`** — third-party deps under their own licenses. Copies collected
    verbatim in `licenses/` (42 files) by `genlicenses.sh`, which reads `vendor/`.
    Includes BSD-3-Clause from The Go Authors (`golang.org/x/...` and the
