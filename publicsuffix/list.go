@@ -1,4 +1,10 @@
-//go:generate sh -c "curl https://publicsuffix.org/list/public_suffix_list.dat >public_suffix_list.txt"
+// The vendored copy carries only what ParseList reads: upstream's licence and
+// version header, then the ICANN section's rules. The per-registry commentary
+// and the private section are dropped at fetch time because they are dropped at
+// parse time anyway — keeping them tracked 244 KB of other people's prose,
+// including registrar contact addresses. Filtering here rather than after the
+// fact keeps a refresh reproducing exactly what is committed.
+//go:generate sh -c "curl -sSf https://publicsuffix.org/list/public_suffix_list.dat | awk '/===BEGIN ICANN DOMAINS===/{print;on=1;next} /===END ICANN DOMAINS===/{print;exit} !on{print;next} NF&&!/^\\//' >public_suffix_list.txt"
 
 // Package publicsuffix implements a public suffix list to look up the
 // organizational domain for a given host name. Organizational domains can be
