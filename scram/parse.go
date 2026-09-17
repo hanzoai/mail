@@ -54,8 +54,7 @@ func (p *parser) recover(rerr *error) {
 	if !ok {
 		panic(x)
 	}
-	var xerr Error
-	if errors.As(err, &xerr) {
+	if _, ok := errors.AsType[Error](err); ok {
 		*rerr = err
 		return
 	}

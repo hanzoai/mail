@@ -293,7 +293,7 @@ func testCondstoreQresync(t *testing.T, qresync, uidonly bool) {
 		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 1, All: esearchall0("1"), ModSeq: clientModseq})
 
 		tc.transactf("ok", "Search Return (Count) 1:* Modseq 0")
-		tc.xesearch(imapclient.UntaggedEsearch{Count: uint32ptr(6), ModSeq: clientModseq})
+		tc.xesearch(imapclient.UntaggedEsearch{Count: new(uint32(6)), ModSeq: clientModseq})
 
 		tc.transactf("ok", "Search Return (Min Max) 1:* Modseq 0")
 		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 6, ModSeq: clientModseq})

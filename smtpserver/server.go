@@ -1054,8 +1054,7 @@ func command(c *conn) {
 			panic(err)
 		}
 
-		var serr smtpError
-		if errors.As(err, &serr) {
+		if serr, ok := errors.AsType[smtpError](err); ok {
 			c.xwritecodeline(serr.code, serr.secode, fmt.Sprintf("%s (%s)", serr.errmsg, mox.ReceivedID(c.cid)), serr.err)
 			if serr.printStack {
 				c.log.Errorx("smtp error", serr.err, slog.Int("code", serr.code), slog.String("secode", serr.secode))

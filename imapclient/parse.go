@@ -886,15 +886,16 @@ func (p *Proto) xnilString() string {
 	}
 }
 
+//go:fix inline
 func ptr[T any](v T) *T {
-	return &v
+	return new(v)
 }
 
 func (p *Proto) xnilptrString() *string {
 	if p.peek('"') {
-		return ptr(p.xquoted())
+		return new(p.xquoted())
 	} else if p.peek('{') {
-		return ptr(string(p.xliteral()))
+		return new(string(p.xliteral()))
 	} else {
 		p.xtake("nil")
 		return nil
@@ -1118,11 +1119,11 @@ func (p *Proto) xbodyExtMpart() (ext *BodyExtensionMpart) {
 	if !p.space() {
 		return
 	}
-	ext.Language = ptr(p.xbodyFldLang())
+	ext.Language = new(p.xbodyFldLang())
 	if !p.space() {
 		return
 	}
-	ext.Location = ptr(p.xbodyFldLoc())
+	ext.Location = new(p.xbodyFldLoc())
 	for p.space() {
 		ext.More = append(ext.More, p.xbodyExtension())
 	}
@@ -1141,11 +1142,11 @@ func (p *Proto) xbodyExt1Part() (ext *BodyExtension1Part) {
 	if !p.space() {
 		return
 	}
-	ext.Language = ptr(p.xbodyFldLang())
+	ext.Language = new(p.xbodyFldLang())
 	if !p.space() {
 		return
 	}
-	ext.Location = ptr(p.xbodyFldLoc())
+	ext.Location = new(p.xbodyFldLoc())
 	for p.space() {
 		ext.More = append(ext.More, p.xbodyExtension())
 	}
@@ -1182,7 +1183,7 @@ func (p *Proto) xbodyFldDsp() (*string, [][2]string) {
 	p.xspace()
 	param := p.xbodyFldParam()
 	p.xtake(")")
-	return ptr(disposition), param
+	return new(disposition), param
 }
 
 // ../rfc/9051:6391 ../rfc/3501:4616

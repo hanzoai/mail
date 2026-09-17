@@ -221,16 +221,16 @@ func TestAPI(t *testing.T) {
 		return nil
 	})
 	tcheck(t, err, "get mailboxes")
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: archive.ID, SpecialUse: store.SpecialUse{Draft: true}})  // Already set.
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{Draft: true}}) // New draft mailbox.
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{Sent: true}})
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{Archive: true}})
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{Trash: true}})
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{Junk: true}})
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{}})                                                                // None
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{Draft: true, Sent: true, Archive: true, Trash: true, Junk: true}}) // All
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{}})                                                                // None again.
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: sent.ID, SpecialUse: store.SpecialUse{Sent: true}})                                                          // Sent, for sending mail later.
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: archive.ID, Draft: true})  // Already set.
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, Draft: true}) // New draft mailbox.
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, Sent: true})
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, Archive: true})
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, Trash: true})
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, Junk: true})
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{}})                                  // None
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, Draft: true, Sent: true, Archive: true, Trash: true, Junk: true}) // All
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: testbox1.ID, SpecialUse: store.SpecialUse{}})                                  // None again.
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: sent.ID, Sent: true})                                                          // Sent, for sending mail later.
 	tneedError(t, func() { api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: 0}) })
 
 	// MailboxesMarkRead

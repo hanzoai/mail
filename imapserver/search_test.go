@@ -34,8 +34,9 @@ this is html.
 --x--
 `, "\n", "\r\n")
 
+//go:fix inline
 func uint32ptr(v uint32) *uint32 {
-	return &v
+	return new(v)
 }
 
 func (tc *testconn) xsearch(nums ...uint32) {
@@ -316,7 +317,7 @@ func testSearch(t *testing.T, uidonly bool) {
 		tc.xesearch(esearchall("1:3")) // Without any options, "ALL" is implicit.
 
 		tc.transactf("ok", "search return (min max count all) all")
-		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 3, Count: uint32ptr(3), All: esearchall0("1:3")})
+		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 3, Count: new(uint32(3)), All: esearchall0("1:3")})
 
 		tc.transactf("ok", "search return (min) all")
 		tc.xesearch(imapclient.UntaggedEsearch{Min: 1})
@@ -352,25 +353,25 @@ func testSearch(t *testing.T, uidonly bool) {
 		tc.xesearch(imapclient.UntaggedEsearch{})
 
 		tc.transactf("ok", "search return (min max all count) not all")
-		tc.xesearch(imapclient.UntaggedEsearch{Count: uint32ptr(0)})
+		tc.xesearch(imapclient.UntaggedEsearch{Count: new(uint32(0))})
 
 		tc.transactf("ok", "search return (min max count all) 1,3")
-		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 3, Count: uint32ptr(2), All: esearchall0("1,3")})
+		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 3, Count: new(uint32(2)), All: esearchall0("1,3")})
 
 		tc.transactf("ok", "search return (min max count all) UID 5,7")
-		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 3, Count: uint32ptr(2), All: esearchall0("1,3")})
+		tc.xesearch(imapclient.UntaggedEsearch{Min: 1, Max: 3, Count: new(uint32(2)), All: esearchall0("1,3")})
 	}
 
 	tc.transactf("ok", "UID search return (min max count all) all")
-	tc.xesearch(imapclient.UntaggedEsearch{UID: true, Min: 5, Max: 7, Count: uint32ptr(3), All: esearchall0("5:7")})
+	tc.xesearch(imapclient.UntaggedEsearch{UID: true, Min: 5, Max: 7, Count: new(uint32(3)), All: esearchall0("5:7")})
 
 	if !uidonly {
 		tc.transactf("ok", "uid search return (min max count all) 1,3")
-		tc.xesearch(imapclient.UntaggedEsearch{UID: true, Min: 5, Max: 7, Count: uint32ptr(2), All: esearchall0("5,7")})
+		tc.xesearch(imapclient.UntaggedEsearch{UID: true, Min: 5, Max: 7, Count: new(uint32(2)), All: esearchall0("5,7")})
 	}
 
 	tc.transactf("ok", "uid search return (min max count all) UID 5,7")
-	tc.xesearch(imapclient.UntaggedEsearch{UID: true, Min: 5, Max: 7, Count: uint32ptr(2), All: esearchall0("5,7")})
+	tc.xesearch(imapclient.UntaggedEsearch{UID: true, Min: 5, Max: 7, Count: new(uint32(2)), All: esearchall0("5,7")})
 
 	if !uidonly {
 		tc.transactf("no", `search return () charset unknown text "mox"`)
@@ -584,8 +585,8 @@ func testSearchMulti(t *testing.T, selected, uidonly bool) {
 	tc.cmdf("Tag1", `Esearch In (Mailboxes (INBOX Archive Archive)) Return (Min Max Count All) All`)
 	tc.response("ok")
 	tc.xuntagged(
-		imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Min: 5, Max: 7, Count: uint32ptr(3), All: esearchall0("5:7")},
-		imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Archive", UIDValidity: 1, UID: true, Min: 1, Max: 1, Count: uint32ptr(1), All: esearchall0("1")},
+		imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Min: 5, Max: 7, Count: new(uint32(3)), All: esearchall0("5:7")},
+		imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Archive", UIDValidity: 1, UID: true, Min: 1, Max: 1, Count: new(uint32(1)), All: esearchall0("1")},
 	)
 
 	// No response if none of the mailboxes exist.
@@ -746,15 +747,15 @@ func testSearchMulti(t *testing.T, selected, uidonly bool) {
 	tc.response("ok")
 	if selected {
 		tc.xuntagged(
-			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Count: uint32ptr(3)},
-			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Archive", UIDValidity: 1, UID: true, Count: uint32ptr(2)},
+			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Count: new(uint32(3))},
+			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Archive", UIDValidity: 1, UID: true, Count: new(uint32(2))},
 			imapclient.UntaggedExists(4),
 			tc.untaggedFetch(4, 8, imapclient.FetchFlags(nil)),
 		)
 	} else {
 		tc.xuntagged(
-			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Count: uint32ptr(4)},
-			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Archive", UIDValidity: 1, UID: true, Count: uint32ptr(2)},
+			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Count: new(uint32(4))},
+			imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Archive", UIDValidity: 1, UID: true, Count: new(uint32(2))},
 		)
 	}
 
@@ -845,7 +846,7 @@ func testSearchMulti(t *testing.T, selected, uidonly bool) {
 	tc.cmdf("Tag1", `Esearch In (Selected) Return (Save Min Max Count) All`)
 	tc.response("ok")
 	tc.xuntagged(
-		imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Min: 5, Max: 8, Count: uint32ptr(4)},
+		imapclient.UntaggedEsearch{Tag: "Tag1", Mailbox: "Inbox", UIDValidity: 1, UID: true, Min: 5, Max: 8, Count: new(uint32(4))},
 	)
 
 	tc.cmdf("Tag1", `Esearch In (Selected) Return () $`)

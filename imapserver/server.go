@@ -1231,9 +1231,6 @@ func (c *conn) command() {
 			panic(x)
 		}
 
-		var sxerr syntaxError
-		var uerr userError
-		var serr serverError
 		if isClosed(err) {
 			c.log.Infox("imap command ioerror", err, logFields...)
 			result = "ioerror"
@@ -1241,7 +1238,7 @@ func (c *conn) command() {
 				debug.PrintStack()
 			}
 			panic(err)
-		} else if errors.As(err, &sxerr) {
+		} else if sxerr, ok := errors.AsType[syntaxError](err); ok {
 			result = "badsyntax"
 			if c.ncmds == 0 {
 				// Other side is likely speaking something else than IMAP, send error message and
@@ -1269,12 +1266,12 @@ func (c *conn) command() {
 				c.xflush()
 				panic(fmt.Errorf("aborting connection after syntax error for command with non-sync literal: %w", errProtocol))
 			}
-		} else if errors.As(err, &serr) {
+		} else if _, ok := errors.AsType[serverError](err); ok {
 			result = "servererror"
 			c.log.Errorx("imap command server error", err, logFields...)
 			debug.PrintStack()
 			c.xbwriteresultf("%s NO %s %v", tag, cmd, err)
-		} else if errors.As(err, &uerr) {
+		} else if uerr, ok := errors.AsType[userError](err); ok {
 			result = "usererror"
 			c.log.Debugx("imap command user error", err, logFields...)
 			if uerr.code != "" {

@@ -21,7 +21,6 @@ import (
 
 	"github.com/hanzoai/mail/config"
 	"github.com/hanzoai/mail/dns"
-	"github.com/hanzoai/mail/junk"
 	"github.com/hanzoai/mail/mlog"
 	"github.com/hanzoai/mail/mox-"
 	"github.com/hanzoai/mail/mtasts"
@@ -111,14 +110,12 @@ func MakeAccountConfig(addr smtp.Address) config.Account {
 		},
 		RejectsMailbox: "Rejects",
 		JunkFilter: &config.JunkFilter{
-			Threshold: 0.95,
-			Params: junk.Params{
-				Onegrams:    true,
-				MaxPower:    .01,
-				TopWords:    10,
-				IgnoreWords: .1,
-				RareWords:   2,
-			},
+			Threshold:   0.95,
+			Onegrams:    true,
+			MaxPower:    .01,
+			TopWords:    10,
+			IgnoreWords: .1,
+			RareWords:   2,
 		},
 		NoCustomPassword: true,
 	}

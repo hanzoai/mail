@@ -354,9 +354,9 @@ Accounts:
 		m1 := store.Message{
 			MailboxID:     sent.ID,
 			MailboxOrigID: sent.ID,
-			Flags:         store.Flags{Seen: true, Junk: true},
-			Size:          int64(len(prefix1) + len(msg1)),
-			MsgPrefix:     []byte(prefix1),
+			Seen:          true, Junk: true,
+			Size:      int64(len(prefix1) + len(msg1)),
+			MsgPrefix: []byte(prefix1),
 		}
 		mf1 := tempfile()
 		xcheckf(err, "creating temp file for delivery")

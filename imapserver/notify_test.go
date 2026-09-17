@@ -109,10 +109,10 @@ func testNotify(t *testing.T, uidonly bool) {
 							},
 							Lines: 1,
 							Ext: &imapclient.BodyExtension1Part{
-								Disposition:       ptr((*string)(nil)),
-								DispositionParams: ptr([][2]string(nil)),
-								Language:          ptr([]string(nil)),
-								Location:          ptr((*string)(nil)),
+								Disposition:       new((*string)(nil)),
+								DispositionParams: new([][2]string(nil)),
+								Language:          new([]string(nil)),
+								Location:          new((*string)(nil)),
 							},
 						},
 						imapclient.BodyTypeText{
@@ -124,24 +124,24 @@ func testNotify(t *testing.T, uidonly bool) {
 							},
 							Lines: 1,
 							Ext: &imapclient.BodyExtension1Part{
-								Disposition:       ptr((*string)(nil)),
-								DispositionParams: ptr([][2]string(nil)),
-								Language:          ptr([]string(nil)),
-								Location:          ptr((*string)(nil)),
+								Disposition:       new((*string)(nil)),
+								DispositionParams: new([][2]string(nil)),
+								Language:          new([]string(nil)),
+								Location:          new((*string)(nil)),
 							},
 						},
 					},
 					MediaSubtype: "ALTERNATIVE",
 					Ext: &imapclient.BodyExtensionMpart{
 						Params:            [][2]string{{"BOUNDARY", "x"}},
-						Disposition:       ptr((*string)(nil)), // Present but nil.
-						DispositionParams: ptr([][2]string(nil)),
-						Language:          ptr([]string(nil)),
-						Location:          ptr((*string)(nil)),
+						Disposition:       new((*string)(nil)), // Present but nil.
+						DispositionParams: new([][2]string(nil)),
+						Language:          new([]string(nil)),
+						Location:          new((*string)(nil)),
 					},
 				},
 			},
-			imapclient.FetchPreview{Preview: ptr("this is plain text.")},
+			imapclient.FetchPreview{Preview: new("this is plain text.")},
 			imapclient.FetchModSeq(modseq),
 		),
 	)

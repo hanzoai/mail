@@ -70,13 +70,12 @@ func failMsgsTx(qlog mlog.Log, tx *bstore.Tx, msgs []*Msg, dialedIPs map[string]
 	m0 := msgs[0]
 
 	var smtpLines []string
-	var cerr smtpclient.Error
 	var permanent bool
 	var errmsg = err.Error()
 	var code int
 	var secodeOpt string
 	var event webhook.OutgoingEvent
-	if errors.As(err, &cerr) {
+	if cerr, ok := errors.AsType[smtpclient.Error](err); ok {
 		if cerr.Line != "" {
 			smtpLines = append([]string{cerr.Line}, cerr.MoreLines...)
 		}

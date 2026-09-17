@@ -328,8 +328,7 @@ func Get(ctx context.Context, elog *slog.Logger, resolver dns.Resolver, domain d
 }
 
 func policyFetchFailureDetails(err error) tlsrpt.FailureDetails {
-	var verificationErr *tls.CertificateVerificationError
-	if errors.As(err, &verificationErr) {
+	if verificationErr, ok := errors.AsType[*tls.CertificateVerificationError](err); ok {
 		resultType, reasonCode := tlsrpt.TLSFailureDetails(verificationErr)
 		// Result: ../rfc/8460:601
 		reason := string(resultType)

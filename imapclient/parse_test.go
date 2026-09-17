@@ -18,7 +18,8 @@ func tcompare(t *testing.T, a, b any) {
 	}
 }
 
-func uint32ptr(v uint32) *uint32 { return &v }
+//go:fix inline
+func uint32ptr(v uint32) *uint32 { return new(v) }
 
 func TestParse(t *testing.T) {
 	code, err := ParseCode("COPYUID 1 1:3 2:4")
@@ -26,8 +27,8 @@ func TestParse(t *testing.T) {
 	tcompare(t, code,
 		CodeCopyUID{
 			DestUIDValidity: 1,
-			From:            []NumRange{{First: 1, Last: uint32ptr(3)}},
-			To:              []NumRange{{First: 2, Last: uint32ptr(4)}},
+			From:            []NumRange{{First: 1, Last: new(uint32(3))}},
+			To:              []NumRange{{First: 2, Last: new(uint32(4))}},
 		},
 	)
 

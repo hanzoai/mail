@@ -42,8 +42,9 @@ func init() {
 	mox.Context = ctxbg
 }
 
+//go:fix inline
 func ptr[T any](v T) *T {
-	return &v
+	return new(v)
 }
 
 func tocrlf(s string) string {

@@ -288,8 +288,7 @@ func deliverDirect(qlog mlog.Log, resolver dns.Resolver, dialer smtpclient.Diale
 		remoteMTA = dsn.NameIP{Name: h.XString(false), IP: remoteIP}
 		if result.err != nil {
 			lastErr = result.err
-			var cerr smtpclient.Error
-			if errors.As(result.err, &cerr) {
+			if cerr, ok := errors.AsType[smtpclient.Error](result.err); ok {
 				if cerr.Secode == smtp.SePol7MissingReqTLS30 {
 					nmissingRequireTLS++
 				}
@@ -551,8 +550,7 @@ func deliverHost(log mlog.Log, resolver dns.Resolver, dialer smtpclient.Dialer, 
 			hostResult = tlsrpt.MakeResult(tlsrpt.NoPolicyFound, tlsaBaseDomain)
 		} else if err != nil {
 			fd := tlsrpt.Details(tlsrpt.ResultTLSAInvalid, "")
-			var errCode adns.ErrorCode
-			if errors.As(err, &errCode) {
+			if errCode, ok := errors.AsType[adns.ErrorCode](err); ok {
 				fd.FailureReasonCode = fmt.Sprintf("extended-dns-error-%d-%s", errCode, strings.ReplaceAll(errCode.String(), " ", "-"))
 				if errCode.IsAuthentication() {
 					// Result: ../rfc/8460:580

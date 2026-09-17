@@ -68,7 +68,7 @@ func testMove(t *testing.T, uidonly bool) {
 
 		tc.transactf("ok", "move 1:* Trash")
 		tc.xuntagged(
-			imapclient.UntaggedResult{Status: "OK", Code: imapclient.CodeCopyUID{DestUIDValidity: 1, From: []imapclient.NumRange{{First: 3, Last: uint32ptr(4)}}, To: []imapclient.NumRange{{First: 1, Last: uint32ptr(2)}}}, Text: "moved"},
+			imapclient.UntaggedResult{Status: "OK", Code: imapclient.CodeCopyUID{DestUIDValidity: 1, From: []imapclient.NumRange{{First: 3, Last: new(uint32(4))}}, To: []imapclient.NumRange{{First: 1, Last: new(uint32(2))}}}, Text: "moved"},
 			imapclient.UntaggedExpunge(1),
 			imapclient.UntaggedExpunge(1),
 		)
@@ -92,12 +92,12 @@ func testMove(t *testing.T, uidonly bool) {
 	tc.transactf("ok", "uid move 6:5 Trash")
 	if uidonly {
 		tc.xuntagged(
-			imapclient.UntaggedResult{Status: "OK", Code: imapclient.CodeCopyUID{DestUIDValidity: 1, From: []imapclient.NumRange{{First: 5, Last: uint32ptr(6)}}, To: []imapclient.NumRange{{First: 3, Last: uint32ptr(4)}}}, Text: "moved"},
+			imapclient.UntaggedResult{Status: "OK", Code: imapclient.CodeCopyUID{DestUIDValidity: 1, From: []imapclient.NumRange{{First: 5, Last: new(uint32(6))}}, To: []imapclient.NumRange{{First: 3, Last: new(uint32(4))}}}, Text: "moved"},
 			imapclient.UntaggedVanished{UIDs: xparseNumSet("5:6")},
 		)
 	} else {
 		tc.xuntagged(
-			imapclient.UntaggedResult{Status: "OK", Code: imapclient.CodeCopyUID{DestUIDValidity: 1, From: []imapclient.NumRange{{First: 5, Last: uint32ptr(6)}}, To: []imapclient.NumRange{{First: 3, Last: uint32ptr(4)}}}, Text: "moved"},
+			imapclient.UntaggedResult{Status: "OK", Code: imapclient.CodeCopyUID{DestUIDValidity: 1, From: []imapclient.NumRange{{First: 5, Last: new(uint32(6))}}, To: []imapclient.NumRange{{First: 3, Last: new(uint32(4))}}}, Text: "moved"},
 			imapclient.UntaggedExpunge(1),
 			imapclient.UntaggedExpunge(1),
 		)

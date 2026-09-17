@@ -725,8 +725,8 @@ func TestSpam(t *testing.T) {
 		MsgFromOrgDomain:  "example.org",
 		MsgFromValidated:  true,
 		MsgFromValidation: store.ValidationStrict,
-		Flags:             store.Flags{Seen: true, Junk: true},
-		Size:              int64(len(deliverMessage)),
+		Seen:              true, Junk: true,
+		Size: int64(len(deliverMessage)),
 	}
 	for range 3 {
 		nm := m
@@ -963,7 +963,7 @@ func TestDMARCSent(t *testing.T) {
 		MailFrom:        "remote@test.example",
 		RcptToLocalpart: smtp.Localpart("mjl"),
 		RcptToDomain:    "mox.example",
-		Flags:           store.Flags{Seen: true},
+		Seen:            true,
 		Size:            int64(len(deliverMessage)),
 	}
 	// We need at least 50 ham messages for the junk filter to become significant. We

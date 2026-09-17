@@ -355,14 +355,8 @@ var invalidReasons = map[x509.InvalidReason]string{
 // Errors from crypto/tls, including local and remote alerts, from crypto/x509,
 // and generic i/o and timeout errors are recognized.
 func TLSFailureDetails(err error) (ResultType, string) {
-	var invalidErr x509.CertificateInvalidError
-	var hostErr x509.HostnameError
-	var unknownAuthErr x509.UnknownAuthorityError
-	var rootsErr x509.SystemRootsError
-	var verifyErr *tls.CertificateVerificationError
 	var netErr *net.OpError
-	var recordHdrErr tls.RecordHeaderError
-	if errors.As(err, &invalidErr) {
+	if invalidErr, ok := errors.AsType[x509.CertificateInvalidError](err); ok {
 		if invalidErr.Reason == x509.Expired {
 			// Result: ../rfc/8460:546
 			return ResultCertificateExpired, ""
@@ -373,16 +367,16 @@ func TLSFailureDetails(err error) (ResultType, string) {
 		}
 		// Result: ../rfc/8460:549
 		return ResultCertificateNotTrusted, s
-	} else if errors.As(err, &hostErr) {
+	} else if _, ok := errors.AsType[x509.HostnameError](err); ok {
 		// Result: ../rfc/8460:541
 		return ResultCertificateHostMismatch, ""
-	} else if errors.As(err, &unknownAuthErr) {
+	} else if _, ok := errors.AsType[x509.UnknownAuthorityError](err); ok {
 		// Result: ../rfc/8460:549
 		return ResultCertificateNotTrusted, ""
-	} else if errors.As(err, &rootsErr) {
+	} else if _, ok := errors.AsType[x509.SystemRootsError](err); ok {
 		// Result: ../rfc/8460:549
 		return ResultCertificateNotTrusted, "no-system-roots"
-	} else if errors.As(err, &verifyErr) {
+	} else if _, ok := errors.AsType[*tls.CertificateVerificationError](err); ok {
 		// We don't know a more specific error. ../rfc/8460:610
 		// Result: ../rfc/8460:567
 		return ResultValidationFailure, "unknown-go-certificate-verification-error"
@@ -398,7 +392,7 @@ func TLSFailureDetails(err error) (ResultType, string) {
 			}
 		}
 		return ResultValidationFailure, reasonCode
-	} else if errors.As(err, &recordHdrErr) {
+	} else if _, ok := errors.AsType[tls.RecordHeaderError](err); ok {
 		// Like for AlertError, not a lot of details, but better than nothing.
 		// Result: ../rfc/8460:567
 		return ResultValidationFailure, "tls-record-header-error"

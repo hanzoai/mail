@@ -136,7 +136,7 @@ type Opts struct {
 // Debug-8.
 func New(conn net.Conn, opts *Opts) (client *Conn, rerr error) {
 	c := Conn{
-		Proto: Proto{conn: conn},
+		conn: conn,
 	}
 
 	var clog *slog.Logger

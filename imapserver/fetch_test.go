@@ -59,10 +59,10 @@ func testFetch(t *testing.T, uidonly bool) {
 	bodystructure1 := bodyxstructure1
 	bodystructure1.RespAttr = "BODYSTRUCTURE"
 	bodyext1 := imapclient.BodyExtension1Part{
-		Disposition:       ptr((*string)(nil)),
-		DispositionParams: ptr([][2]string(nil)),
-		Language:          ptr([]string(nil)),
-		Location:          ptr((*string)(nil)),
+		Disposition:       new((*string)(nil)),
+		DispositionParams: new([][2]string(nil)),
+		Language:          new([]string(nil)),
+		Location:          new((*string)(nil)),
 	}
 	bodystructbody1.Ext = &bodyext1
 	bodystructure1.Body = bodystructbody1
@@ -312,19 +312,19 @@ func testFetch(t *testing.T, uidonly bool) {
 					Bodies: []any{
 						imapclient.BodyTypeBasic{MediaType: "AUDIO", MediaSubtype: "BASIC", BodyFields: imapclient.BodyFields{CTE: "BASE64", Octets: 22}, Ext: &bodyext1},
 						imapclient.BodyTypeBasic{MediaType: "IMAGE", MediaSubtype: "JPEG", BodyFields: imapclient.BodyFields{CTE: "BASE64"}, Ext: &imapclient.BodyExtension1Part{
-							Disposition:       ptr(ptr("inline")),
-							DispositionParams: ptr([][2]string{{"filename", "image.jpg"}}),
-							Language:          ptr([]string(nil)),
-							Location:          ptr((*string)(nil)),
+							Disposition:       new(new("inline")),
+							DispositionParams: new([][2]string{{"filename", "image.jpg"}}),
+							Language:          new([]string(nil)),
+							Location:          new((*string)(nil)),
 						}},
 					},
 					MediaSubtype: "PARALLEL",
 					Ext: &imapclient.BodyExtensionMpart{
 						Params:            [][2]string{{"BOUNDARY", "unique-boundary-2"}},
-						Disposition:       ptr((*string)(nil)), // Present but nil.
-						DispositionParams: ptr([][2]string(nil)),
-						Language:          ptr([]string(nil)),
-						Location:          ptr((*string)(nil)),
+						Disposition:       new((*string)(nil)), // Present but nil.
+						DispositionParams: new([][2]string(nil)),
+						Language:          new([]string(nil)),
+						Location:          new((*string)(nil)),
 					},
 				},
 				imapclient.BodyTypeText{MediaType: "TEXT", MediaSubtype: "ENRICHED", BodyFields: imapclient.BodyFields{Octets: 145}, Lines: 5, Ext: &bodyext1},
@@ -343,21 +343,21 @@ func testFetch(t *testing.T, uidonly bool) {
 						MediaType: "TEXT", MediaSubtype: "PLAIN", BodyFields: imapclient.BodyFields{Params: [][2]string{{"CHARSET", "ISO-8859-1"}}, CTE: "QUOTED-PRINTABLE", Octets: 51}, Lines: 1, Ext: &bodyext1},
 					Lines: 7,
 					Ext: &imapclient.BodyExtension1Part{
-						MD5:               ptr("MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY="),
-						Disposition:       ptr((*string)(nil)),
-						DispositionParams: ptr([][2]string(nil)),
-						Language:          ptr([]string{"en", "de"}),
-						Location:          ptr(ptr("http://localhost")),
+						MD5:               new("MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY="),
+						Disposition:       new((*string)(nil)),
+						DispositionParams: new([][2]string(nil)),
+						Language:          new([]string{"en", "de"}),
+						Location:          new(new("http://localhost")),
 					},
 				},
 			},
 			MediaSubtype: "MIXED",
 			Ext: &imapclient.BodyExtensionMpart{
 				Params:            [][2]string{{"BOUNDARY", "unique-boundary-1"}},
-				Disposition:       ptr((*string)(nil)), // Present but nil.
-				DispositionParams: ptr([][2]string(nil)),
-				Language:          ptr([]string(nil)),
-				Location:          ptr((*string)(nil)),
+				Disposition:       new((*string)(nil)), // Present but nil.
+				DispositionParams: new([][2]string(nil)),
+				Language:          new([]string(nil)),
+				Location:          new((*string)(nil)),
 			},
 		},
 	}

@@ -238,12 +238,10 @@ func TestServer(t *testing.T) {
 	var sb strings.Builder
 	mp := multipart.NewWriter(&sb)
 	fdSendReq := webapi.SendRequest{
-		Message: webapi.Message{
-			To: []webapi.NameAddress{{Address: "møx@mox.example"}},
-			// Let server assign date, message-id.
-			Subject: "test",
-			Text:    "hi",
-		},
+		To: []webapi.NameAddress{{Address: "møx@mox.example"}},
+		// Let server assign date, message-id.
+		Subject: "test",
+		Text:    "hi",
 		// Don't let server add its own user-agent.
 		Headers: [][2]string{{"User-Agent", "test"}},
 	}
@@ -297,63 +295,51 @@ func TestServer(t *testing.T) {
 
 	// Trigger various error conditions.
 	_, err = client.Send(ctxbg, webapi.SendRequest{
-		Message: webapi.Message{
-			To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
-			Subject: "test",
-		},
+		To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
+		Subject: "test",
 	})
 	terrcode(t, err, "missingBody")
 
 	_, err = client.Send(ctxbg, webapi.SendRequest{
-		Message: webapi.Message{
-			From:    []webapi.NameAddress{{Address: "other@mox.example"}},
-			To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
-			Subject: "test",
-			Text:    "hi",
-		},
+		From:    []webapi.NameAddress{{Address: "other@mox.example"}},
+		To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
+		Subject: "test",
+		Text:    "hi",
 	})
 	terrcode(t, err, "badFrom")
 
 	_, err = client.Send(ctxbg, webapi.SendRequest{
-		Message: webapi.Message{
-			From:    []webapi.NameAddress{{Address: "mox@mox.example"}, {Address: "mox@mox.example"}},
-			To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
-			Subject: "test",
-			Text:    "hi",
-		},
+		From:    []webapi.NameAddress{{Address: "mox@mox.example"}, {Address: "mox@mox.example"}},
+		To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
+		Subject: "test",
+		Text:    "hi",
 	})
 	terrcode(t, err, "multipleFrom")
 
-	_, err = client.Send(ctxbg, webapi.SendRequest{Message: webapi.Message{Subject: "test", Text: "hi"}})
+	_, err = client.Send(ctxbg, webapi.SendRequest{Subject: "test", Text: "hi"})
 	terrcode(t, err, "noRecipients")
 
 	_, err = client.Send(ctxbg, webapi.SendRequest{
-		Message: webapi.Message{
-			MessageID: "missingltgt@localhost",
-			To:        []webapi.NameAddress{{Address: "møx@mox.example"}},
-			Subject:   "test",
-			Text:      "hi",
-		},
+		MessageID: "missingltgt@localhost",
+		To:        []webapi.NameAddress{{Address: "møx@mox.example"}},
+		Subject:   "test",
+		Text:      "hi",
 	})
 	terrcode(t, err, "malformedMessageID")
 
 	_, err = client.Send(ctxbg, webapi.SendRequest{
-		Message: webapi.Message{
-			MessageID: "missingltgt@localhost",
-			To:        []webapi.NameAddress{{Address: "møx@mox.example"}},
-			Subject:   "test",
-			Text:      "hi",
-		},
+		MessageID: "missingltgt@localhost",
+		To:        []webapi.NameAddress{{Address: "møx@mox.example"}},
+		Subject:   "test",
+		Text:      "hi",
 	})
 	terrcode(t, err, "malformedMessageID")
 
 	_, err = client.Send(ctxbg, webapi.SendRequest{
-		Message: webapi.Message{
-			From:    []webapi.NameAddress{{Address: "mjl@disabled.example"}},
-			To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
-			Subject: "test",
-			Text:    "hi",
-		},
+		From:    []webapi.NameAddress{{Address: "mjl@disabled.example"}},
+		To:      []webapi.NameAddress{{Address: "mjl@mox.example"}},
+		Subject: "test",
+		Text:    "hi",
 	})
 	terrcode(t, err, "domainDisabled")
 

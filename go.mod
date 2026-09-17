@@ -1,6 +1,6 @@
 module github.com/hanzoai/mail
 
-go 1.25.0
+go 1.27.1
 
 require (
 	github.com/mjl-/adns v0.0.0-20250321173553-ab04b05bdfea

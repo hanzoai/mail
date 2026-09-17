@@ -33,7 +33,6 @@ import (
 
 	"github.com/hanzoai/mail/config"
 	"github.com/hanzoai/mail/dns"
-	"github.com/hanzoai/mail/junk"
 	"github.com/hanzoai/mail/mlog"
 	"github.com/hanzoai/mail/mox-"
 	"github.com/hanzoai/mail/queue"
@@ -497,13 +496,11 @@ func TestAccount(t *testing.T) {
 
 	api.JunkFilterSave(ctx, nil)
 	jf := config.JunkFilter{
-		Threshold: 0.95,
-		Params: junk.Params{
-			Twograms:    true,
-			MaxPower:    0.1,
-			TopWords:    10,
-			IgnoreWords: 0.1,
-		},
+		Threshold:   0.95,
+		Twograms:    true,
+		MaxPower:    0.1,
+		TopWords:    10,
+		IgnoreWords: 0.1,
 	}
 	api.JunkFilterSave(ctx, &jf)
 

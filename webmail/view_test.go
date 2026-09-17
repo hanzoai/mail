@@ -385,18 +385,18 @@ func TestView(t *testing.T) {
 	var chmbrename ChangeMailboxRename
 	getChanges(&chmbrename)
 	tcompare(t, chmbrename, ChangeMailboxRename{
-		ChangeRenameMailbox: store.ChangeRenameMailbox{MailboxID: chmbadd.Mailbox.ID, OldName: "Newbox", NewName: "Newbox2", Flags: nil, ModSeq: 13},
+		MailboxID: chmbadd.Mailbox.ID, OldName: "Newbox", NewName: "Newbox2", Flags: nil, ModSeq: 13,
 	})
 
 	// ChangeMailboxSpecialUse
-	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: chmbadd.Mailbox.ID, SpecialUse: store.SpecialUse{Archive: true}})
+	api.MailboxSetSpecialUse(ctx, store.Mailbox{ID: chmbadd.Mailbox.ID, Archive: true})
 	var chmbspecialuseOld, chmbspecialuseNew ChangeMailboxSpecialUse
 	getChanges(&chmbspecialuseOld, &chmbspecialuseNew)
 	tcompare(t, chmbspecialuseOld, ChangeMailboxSpecialUse{
-		ChangeMailboxSpecialUse: store.ChangeMailboxSpecialUse{MailboxID: archive.ID, MailboxName: "Archive", SpecialUse: store.SpecialUse{}, ModSeq: 14},
+		MailboxID: archive.ID, MailboxName: "Archive", SpecialUse: store.SpecialUse{}, ModSeq: 14,
 	})
 	tcompare(t, chmbspecialuseNew, ChangeMailboxSpecialUse{
-		ChangeMailboxSpecialUse: store.ChangeMailboxSpecialUse{MailboxID: chmbadd.Mailbox.ID, MailboxName: "Newbox2", SpecialUse: store.SpecialUse{Archive: true}, ModSeq: 14},
+		MailboxID: chmbadd.Mailbox.ID, MailboxName: "Newbox2", SpecialUse: store.SpecialUse{Archive: true}, ModSeq: 14,
 	})
 
 	// ChangeMailboxRemove
@@ -404,7 +404,7 @@ func TestView(t *testing.T) {
 	var chmbremove ChangeMailboxRemove
 	getChanges(&chmbremove)
 	tcompare(t, chmbremove, ChangeMailboxRemove{
-		ChangeRemoveMailbox: store.ChangeRemoveMailbox{MailboxID: chmbadd.Mailbox.ID, Name: "Newbox2", ModSeq: 15},
+		MailboxID: chmbadd.Mailbox.ID, Name: "Newbox2", ModSeq: 15,
 	})
 
 	// ChangeMsgAdd
@@ -417,11 +417,9 @@ func TestView(t *testing.T) {
 	tcompare(t, chmsgadd.MessageItems[0].Message.ID, inboxNew.ID)
 	chmbcounts.Size = 0
 	tcompare(t, chmbcounts, ChangeMailboxCounts{
-		ChangeMailboxCounts: store.ChangeMailboxCounts{
-			MailboxID:     inbox.ID,
-			MailboxName:   inbox.Name,
-			MailboxCounts: store.MailboxCounts{Total: 4, Unread: 3, Unseen: 3},
-		},
+		MailboxID:   inbox.ID,
+		MailboxName: inbox.Name,
+		Total:       4, Unread: 3, Unseen: 3,
 	})
 
 	// ChangeMsgFlags
@@ -431,19 +429,15 @@ func TestView(t *testing.T) {
 	getChanges(&chmsgflags, &chmbcounts, &chmbkeywords)
 	tcompare(t, chmsgadd.ChangeAddUID.MailboxID, inbox.ID)
 	tcompare(t, chmbkeywords, ChangeMailboxKeywords{
-		ChangeMailboxKeywords: store.ChangeMailboxKeywords{
-			MailboxID:   inbox.ID,
-			MailboxName: inbox.Name,
-			Keywords:    []string{`aaa`, `changelabel`, `testlabel`},
-		},
+		MailboxID:   inbox.ID,
+		MailboxName: inbox.Name,
+		Keywords:    []string{`aaa`, `changelabel`, `testlabel`},
 	})
 	chmbcounts.Size = 0
 	tcompare(t, chmbcounts, ChangeMailboxCounts{
-		ChangeMailboxCounts: store.ChangeMailboxCounts{
-			MailboxID:     inbox.ID,
-			MailboxName:   inbox.Name,
-			MailboxCounts: store.MailboxCounts{Total: 4, Unread: 2, Unseen: 2},
-		},
+		MailboxID:   inbox.ID,
+		MailboxName: inbox.Name,
+		Total:       4, Unread: 2, Unseen: 2,
 	})
 
 	// ChangeMsgRemove
@@ -454,11 +448,9 @@ func TestView(t *testing.T) {
 	tcompare(t, chmsgremove.ChangeRemoveUIDs.UIDs, []store.UID{inboxMinimal.m.UID, inboxNew.m.UID})
 	chmbcounts.Size = 0
 	tcompare(t, chmbcounts, ChangeMailboxCounts{
-		ChangeMailboxCounts: store.ChangeMailboxCounts{
-			MailboxID:     inbox.ID,
-			MailboxName:   inbox.Name,
-			MailboxCounts: store.MailboxCounts{Total: 2, Unread: 1, Unseen: 1},
-		},
+		MailboxID:   inbox.ID,
+		MailboxName: inbox.Name,
+		Total:       2, Unread: 1, Unseen: 1,
 	})
 
 	// ChangeMsgThread

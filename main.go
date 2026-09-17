@@ -3478,8 +3478,7 @@ func cmdWebapi(c *cmd) {
 	t := reflect.TypeFor[webapi.Methods]()
 	methods := map[string]reflect.Type{}
 	var ml []string
-	for i := range t.NumMethod() {
-		mt := t.Method(i)
+	for mt := range t.Methods() {
 		methods[mt.Name] = mt.Type
 		ml = append(ml, mt.Name)
 	}

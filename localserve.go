@@ -29,7 +29,6 @@ import (
 	"github.com/hanzoai/mail/config"
 	"github.com/hanzoai/mail/dkim"
 	"github.com/hanzoai/mail/dns"
-	"github.com/hanzoai/mail/junk"
 	"github.com/hanzoai/mail/mlog"
 	"github.com/hanzoai/mail/mox-"
 	"github.com/hanzoai/mail/moxvar"
@@ -409,14 +408,12 @@ func writeLocalConfig(log mlog.Log, dir, ip string) (rerr error) {
 	acc.AutomaticJunkFlags.JunkMailboxRegexp = "^(junk|spam)"
 	acc.AutomaticJunkFlags.NeutralMailboxRegexp = "^(inbox|neutral|postmaster|dmarc|tlsrpt|rejects)"
 	acc.JunkFilter = &config.JunkFilter{
-		Threshold: 0.95,
-		Params: junk.Params{
-			Onegrams:    true,
-			MaxPower:    .01,
-			TopWords:    10,
-			IgnoreWords: .1,
-			RareWords:   2,
-		},
+		Threshold:   0.95,
+		Onegrams:    true,
+		MaxPower:    .01,
+		TopWords:    10,
+		IgnoreWords: .1,
+		RareWords:   2,
 	}
 
 	dkimKeyBuf, err := admin.MakeDKIMEd25519Key(dns.Domain{ASCII: "localserve"}, dns.Domain{ASCII: "localhost"})

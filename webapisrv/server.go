@@ -1089,9 +1089,9 @@ func (s server) Send(ctx context.Context, req webapi.SendRequest) (resp webapi.S
 					ModSeq:        modseq,
 					MailboxID:     sentmb.ID,
 					MailboxOrigID: sentmb.ID,
-					Flags:         store.Flags{Notjunk: true, Seen: true},
-					Size:          int64(len(msgPrefix)) + xc.Size,
-					MsgPrefix:     []byte(msgPrefix),
+					Notjunk:       true, Seen: true,
+					Size:      int64(len(msgPrefix)) + xc.Size,
+					MsgPrefix: []byte(msgPrefix),
 				}
 
 				err = acc.MessageAdd(log, tx, &sentmb, &sentm, dataFile, store.AddOpts{})

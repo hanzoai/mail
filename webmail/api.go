@@ -457,7 +457,7 @@ func (w Webmail) MessageCompose(ctx context.Context, m ComposeMessage, mailboxID
 				ModSeq:        modseq,
 				MailboxID:     mb.ID,
 				MailboxOrigID: mb.ID,
-				Flags:         store.Flags{Notjunk: true},
+				Notjunk:       true,
 				Size:          xc.Size,
 			}
 
@@ -1123,9 +1123,9 @@ func (w Webmail) MessageSubmit(ctx context.Context, m SubmitMessage) {
 				ModSeq:        modseq,
 				MailboxID:     sentmb.ID,
 				MailboxOrigID: sentmb.ID,
-				Flags:         store.Flags{Notjunk: true, Seen: true},
-				Size:          int64(len(msgPrefix)) + xc.Size,
-				MsgPrefix:     []byte(msgPrefix),
+				Notjunk:       true, Seen: true,
+				Size:      int64(len(msgPrefix)) + xc.Size,
+				MsgPrefix: []byte(msgPrefix),
 			}
 
 			err = acc.MessageAdd(log, tx, &sentmb, &sentm, dataFile, store.AddOpts{})
