@@ -68,6 +68,30 @@ proton.me.
 
 The code is heavily cross-referenced with the RFCs for readability/maintainability.
 
+## 5-Minute Local Loopback Smoke Test
+
+Run an isolated local loopback instance (SMTP, Submission, IMAP, DKIM signing/verification, and Webmail) using the vendor tree:
+
+```sh
+# 1. Build (GOWORK=off avoids picking up a parent workspace go.work)
+export GOWORK=off GOFLAGS=-mod=vendor
+go build -o mox .
+
+# 2. Run the automated loopback SMTP -> IMAP -> DKIM & webmail smoke test
+./scripts/smoke-localserve.sh
+# or directly via Go test:
+go test -count=1 -v -run '^TestLocalserveLoopbackSmoke$' .
+
+# 3. (Optional) Start an interactive loopback server in a clean directory
+./mox localserve -dir /tmp/mox-localserve
+```
+
+Default `localserve` endpoints and credentials:
+- **Account:** `mox@localhost` / password `moxmoxmox` (admin password: `moxadmin`)
+- **SMTP / Submission:** `localhost:1025` (inbound) / `localhost:1587` (submission)
+- **IMAP / IMAPS:** `localhost:1143` / `localhost:1993`
+- **Webmail / Account / Admin UI:** `http://localhost:1080/webmail/`, `http://localhost:1080/account/`, `http://localhost:1080/admin/`
+
 # Quickstart
 
 The easiest way to get started with serving email for your domain is to get a
